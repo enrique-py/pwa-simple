@@ -4,7 +4,7 @@
     <!-- Codificacion de caracteres -->
     <meta charset="UTF-8">
     <!-- Responsive Web Design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <!-- Titulo de la web -->
     <title>PWA en angular</title>
     <!-- Descripcion de la pagina -->
@@ -12,8 +12,22 @@
     <meta name="Description" content="This site provides information about my profile and my abilities to create progressive web apps.">
     <!-- Imagen favicon de la pagina -->
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <!--Color de la aplicación-->
+    <meta name="theme-color" content="black"/>
+    <!--Optimización mobile android-->
+    <meta name="MobileOptimized" content="width"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <!--Optimización mobile apple-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <link rel="apple-touch-icon" href="img/favicon.png" />
+    <link rel="apple-touch-startup-image" href="img/favicon.png" />
+    <!--Conf general PWA-->
+    <link rel="manifest" href="manifest.json"/>
     <!-- Hoja de estilos -->
     <link rel="stylesheet" href="css/styles.css">
+    <!--Scripts-->
+    <script src="main.js"></script>
 </head>
 <body>
     <header id="main-header">
@@ -24,19 +38,21 @@
             <div id="menu">
                 <ul>
                     <li>
-                        <a href="#">Inicio</a>
+                        <a href="#main-header">Inicio</a>
                     </li>
                     <li>
-                        <a href="#">Servicios</a>
+                        <a href="#services">Servicios</a>
                     </li>
                     <li>
-                        <a href="#">Contacto</a>
+                        <a href="#footer">Contacto</a>
                     </li>
                 </ul>
             </div> <!--end menu-->
         </div>
     </header>
 
+    <div class="clearfix"></div>
+    
     <!-- slider -->
     <div id="slider">
         <div class="container">
@@ -71,7 +87,7 @@
     <!-- end services -->
 
     <!-- footer -->
-    <footer>
+    <footer id="footer">
         <div class="container">
             <h2 class="subheader">
                 Contacto
